@@ -4,7 +4,7 @@ int state=0;
 int base=2;
 String number=" ";
 int s=0;
-int t=8;
+//int t=8;
 color num;
 void setup(){
 
@@ -12,39 +12,38 @@ void setup(){
   frameRate(9999);
 }
 void settings(){
-  size(t,t);  
+  size(200,200);  
 }
 
 void draw(){
-  loadPixels();
+ // loadPixels();
   frame.setResizable(true);
   state=int(random(0,base));
   noStroke();
 
   for(int i=0;i<base;i++){
-     if(state==i){
+     //if(state==i){
+       
         num=color(255*i/(base-1));
-      }
+        fill(num);
+        point(x,y);
+     // }
     }
   
-  pixels[x]=num;
+  //pixels[x]=num;
   number+=state;
   number+=",";
-  if(x<height*width){
-  x+=1;
- 
- 
+  x++;
+  if(x>width){
+ y++;
+ x=0;
   }
-  if(x==width*height){
-   y+=1;
-   x=0;
-   t+=1;
-   
-  }
-  println(state,"|",x,"|",y,"|",base,"|",frameRate,"|",t);
   
-updatePixels();
- frame.setSize(t,t);
+  
+   
+  
+  println(state,"|",x,"|",y,"|",base,"|",frameRate,"|");
+  
 }
 void keyPressed(){
  if(keyCode==UP){
