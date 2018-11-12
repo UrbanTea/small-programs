@@ -21,12 +21,15 @@ for(int i=0;i<dictnary.length;i++){
 
 
 void draw(){
-  String input="pitter patter pitter patter of the rain on the window lisson to the pitter patter pitter patter of the rain on the window";
+
+  String input="aaaaaaaaaahhhhhhhhhh";
 String[] cutinput=splitTokens(input);
 
   String output=input;
   background(0);
   text(output,10,height/4);
+  text("word: "+dictnary[index],10,((height/4)*2)-30);
+  text("position: "+index,10,((height/4)*2)-15);
   text(join(dictnary, " , "),10,(height/4)*2);
   //replaceing the letters found with the dictnary
   for(int i=0;i<dictnary.length;i++){
@@ -37,6 +40,10 @@ String[] cutinput=splitTokens(input);
   }
     
  }
+ 
+ fill(255);
+ rectMode(CENTER);
+
  String dictnatyT=join(dictnary,"");
  text(input,10,(height/4)*3);
  println(output.length(),input.length()+dictnatyT.length(),dictnary.length,index,join(cutinput,"."));
