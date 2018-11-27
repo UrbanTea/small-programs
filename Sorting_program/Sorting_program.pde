@@ -1,23 +1,29 @@
-float[] lineH=new float[200];
+float[] lineH=new float[100];
 float[] temp=new float[lineH.length];
 int index=0;
 int index1=1;
 int index2=2;
-int distance=lineH.length/10;
+int d2=lineH.length/10;
+int distance=d2;
+
 int totalCorrect=0;
 int totalswaps=0;
+int comparason=0;
 int time=0;
 void setup(){
+  
   size(800,400);
   frameRate(999);
   for(int i=0;i<lineH.length;i++){
    lineH[i]=random(1,height); 
+   temp[i]=0;
    print(lineH[i]+"||");
   }
   
   
 }
 void draw(){
+  randomData(1,1);
  background(0); 
 strokeWeight(.5);
  for(int i=0;i<lineH.length;i++){
@@ -35,9 +41,10 @@ strokeWeight(.5);
    rect((width/lineH.length)*i,height-lineH[i],(width/lineH.length),lineH[i]);
    
  }
- println(frameRate,"||"," swaps ",totalCorrect,totalswaps);
+ println(frameRate,"||"," swaps ",totalCorrect,totalswaps," || ", "comparason ",comparason);
 //swapSort();
 //quickSort();
-swapSortLong();
-//compareSort();
+//swapSortLong();
+compareSort();
+ //compareSortChunk();
 }

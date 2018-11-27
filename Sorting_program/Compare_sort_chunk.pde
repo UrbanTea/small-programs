@@ -1,13 +1,20 @@
-void compareSort(){
+void compareSortChunk(){
 
  
 if(index1<index){
   index++;
-  index1=(lineH.length-1);
+  index1=index+10;
+ 
+ 
   totalCorrect=0;
  }  
+  if(index1>lineH.length-1){
+  index1=lineH.length-1;
+
+ }
  if(index>lineH.length-1){
-  index=0; 
+  index=0;
+temp[1]++;
   index1=1;
 
  }
@@ -27,7 +34,6 @@ if(index1<index){
  comparason++;
  //index++;
 index1--;
-
  }
  }
  
