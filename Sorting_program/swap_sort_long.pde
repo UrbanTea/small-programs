@@ -1,7 +1,11 @@
-void swapSort(){
+void swapSortLong(){
 if(index>lineH.length-1||index1>lineH.length-1){
   index=0;
-  index1=1;
+  index1=distance;
+  distance--;
+  if(distance==0){
+   distance=lineH.length/10; 
+  }
   totalCorrect=0;
  }
  if(lineH[index]>lineH[index1]){
