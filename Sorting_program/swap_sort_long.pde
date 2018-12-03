@@ -6,7 +6,7 @@ if(index>lineH.length-1||index1>lineH.length-1){
   distance=d2; 
  }else{
  
-  distance--; 
+  distance-=d2; 
   
  }
  

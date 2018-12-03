@@ -1,4 +1,4 @@
-float[] lineH=new float[400];
+float[] lineH=new float[1900/1];
 float[] temp=new float[lineH.length];
 int index=0;
 int index1=1;
@@ -12,10 +12,11 @@ int comparason=0;
 int time=0;
 void setup(){
   
-  size(800,400);
+  size(1900,500);
   frameRate(9999);
   for(int i=0;i<lineH.length;i++){
    lineH[i]=random(1,height); 
+  //lineH[i]=height-i;
    temp[i]=0;
    print(lineH[i]+"||");
   }
@@ -23,22 +24,22 @@ void setup(){
   
 }
 void draw(){
-  randomData(.8,10,1);
+  //randomData(10,10,1);
  background(0); 
 strokeWeight(.5);
 noStroke();
  for(int i=0;i<lineH.length;i++){
-   if(i==index){
-     fill(255,0,0);
-   }else if(i==index1){
+   fill(255,255,255);
+   if(i<lineH.length-1){
+  if(lineH[i]<=lineH[i+1]){
      fill(0,255,0);
-   }else if(i==index2){
-     fill(0,0,255);
-   } else{
-     fill(255,255,255);
    }
+ }
  
-  
+   if(i==index||i==index1||i==index2){
+     fill(255,0,0);
+   } 
+ 
    rect(i*(width/lineH.length),height-lineH[i],(width/lineH.length),lineH[i]);
    
  }
@@ -47,5 +48,5 @@ noStroke();
 //quickSort();
 //swapSortLong();
 compareSort();
- //compareSortChunk();
+// compareSortChunk();
 }
