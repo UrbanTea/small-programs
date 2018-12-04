@@ -1,8 +1,9 @@
-float[] lineH=new float[1900/1];
+float[] lineH=new float[1900/5];
 float[] temp=new float[lineH.length];
 int index=0;
 int index1=1;
 int index2=0;
+int index3=0;
 int d2=lineH.length/10;
 int distance=d2;
 
@@ -12,7 +13,7 @@ int comparason=0;
 int time=0;
 void setup(){
   
-  size(1900,500);
+  size(1900,800);
   frameRate(9999);
   for(int i=0;i<lineH.length;i++){
    lineH[i]=random(1,height); 
@@ -24,19 +25,21 @@ void setup(){
   
 }
 void draw(){
-  //randomData(10,10,1);
+  randomData(1,1,1);
  background(0); 
 strokeWeight(.5);
 noStroke();
  for(int i=0;i<lineH.length;i++){
    fill(255,255,255);
    if(i<lineH.length-1){
-  if(lineH[i]<=lineH[i+1]){
+     if(i>0){
+  if(lineH[i]>lineH[i-1]&&lineH[i+1]>lineH[i]){
      fill(0,255,0);
    }
  }
+   }
  
-   if(i==index||i==index1||i==index2){
+   if(i==index||i==index1||i==index2||i==index3){
      fill(255,0,0);
    } 
  
@@ -47,6 +50,7 @@ noStroke();
 //swapSort();
 //quickSort();
 //swapSortLong();
-compareSort();
-// compareSortChunk();
+//compareSort();
+ //compareSortChunk();
+ insertSort();
 }

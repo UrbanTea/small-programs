@@ -19,4 +19,5 @@ if(index>lineH.length-1||index1>lineH.length-1){
  comparason++;
  index1++;
  }
+  
 }

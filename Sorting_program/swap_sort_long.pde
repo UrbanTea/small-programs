@@ -2,11 +2,11 @@ void swapSortLong(){
 if(index>lineH.length-1||index1>lineH.length-1){
   index=0;
   index1=distance;
- if(distance==0){
+ if(distance<=0){
   distance=d2; 
  }else{
  
-  distance-=d2; 
+  distance--; 
   
  }
  
@@ -26,4 +26,5 @@ comparason++;
  index++;
  index1++;
  }
+
 }

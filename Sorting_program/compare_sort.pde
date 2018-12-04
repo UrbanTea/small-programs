@@ -48,6 +48,14 @@ index1--;
 
 
  }
+  if(index1>0){
+    if(index1<lineH.length-1){
+ if(lineH[index1]>lineH[index1-1]&&lineH[index1+1]>lineH[index1]){
+   comparason++;
+index1--;
+ }
+    }
+ }
  }
  if(index2<0){
   index2=index;
@@ -71,6 +79,14 @@ index1--;
  //index++;
 index2--;
 
+ }
+  if(index2>0){
+    if(index2<lineH.length-1){
+ if(lineH[index2]>lineH[index2-1]&&lineH[index2+1]>lineH[index2]){
+   comparason++;
+index2--;
+ }
+    }
  }
  }
  
