@@ -32,6 +32,7 @@ index3--;
   index3=index2;
 
  }
+ if(index3<lineH.length-1){
   if(lineH[index3+1]<lineH[index3]){
    totalCorrect++;
    totalswaps++;
@@ -42,7 +43,7 @@ index3--;
 
  //index2--;
   
-
+  }
  }
   if(index3>0){
     if(index3<lineH.length-1){

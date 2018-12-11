@@ -1,4 +1,10 @@
-float[] lineH=new float[1900/5];
+int sizeW=1900;
+void settings(){
+    //fullScreen();
+size(sizeW,800);
+}
+
+float[] lineH=new float[sizeW/5];
 float[] temp=new float[lineH.length];
 int index=0;
 int index1=1;
@@ -12,8 +18,7 @@ int totalswaps=0;
 int comparason=0;
 int time=0;
 void setup(){
-  
-  size(1900,800);
+
   frameRate(9999);
   for(int i=0;i<lineH.length;i++){
    lineH[i]=random(1,height); 
@@ -25,7 +30,7 @@ void setup(){
   
 }
 void draw(){
-  randomData(1,1,1);
+  //randomData(1,1,1);
  background(0); 
 strokeWeight(.5);
 noStroke();
@@ -50,7 +55,7 @@ noStroke();
 //swapSort();
 //quickSort();
 //swapSortLong();
-//compareSort();
+compareSort();
  //compareSortChunk();
- insertSort();
+ //insertSort();
 }
