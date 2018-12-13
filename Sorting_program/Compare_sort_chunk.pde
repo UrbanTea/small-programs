@@ -16,7 +16,7 @@ if(index1<index){
   index=0;
 temp[1]++;
   index1=1;
-
+compleatCheck();
  }
  if(lineH[index]>lineH[index1]){
    totalCorrect++;

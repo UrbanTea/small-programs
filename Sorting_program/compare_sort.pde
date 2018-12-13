@@ -7,9 +7,11 @@ if(index1<index){
   totalCorrect=0;
  }  
  if(index>lineH.length-1){
+   compleatCheck();
   index=0; 
   index1=1;
 index2=index;
+
  }
  if(lineH[index]>lineH[index1]){
    totalCorrect++;
@@ -38,7 +40,7 @@ index1--;
    lineH[index1]=lineH[index1-1];
    lineH[index1-1]=temp[3];
  
-   index1--;
+  
   
 
  

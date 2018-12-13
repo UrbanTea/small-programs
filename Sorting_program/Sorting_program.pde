@@ -1,10 +1,11 @@
 int sizeW=1900;
+int dataPointWidth=20;
 void settings(){
     //fullScreen();
 size(sizeW,800);
 }
 
-float[] lineH=new float[sizeW/5];
+float[] lineH=new float[sizeW/dataPointWidth];
 float[] temp=new float[lineH.length];
 int index=0;
 int index1=1;
@@ -12,7 +13,9 @@ int index2=0;
 int index3=0;
 int d2=lineH.length/10;
 int distance=d2;
-
+boolean compleat=false;
+int compleatI=0;
+int compleatCount=0;
 int totalCorrect=0;
 int totalswaps=0;
 int comparason=0;
@@ -41,6 +44,9 @@ noStroke();
   if(lineH[i]>lineH[i-1]&&lineH[i+1]>lineH[i]){
      fill(0,255,0);
    }
+   if(i==compleatI){
+    fill(0,0,255); 
+   }
  }
    }
  
@@ -51,11 +57,13 @@ noStroke();
    rect(i*(width/lineH.length),height-lineH[i],(width/lineH.length),lineH[i]);
    
  }
- println(frameRate,"||"," swaps ",totalCorrect,totalswaps," || ", "comparason ",comparason);
+ println(frameRate,"||"," swaps ",totalCorrect,totalswaps," || ", "comparason ",comparason,"compleat",compleat,compleatI);
+if(compleat==false){
 //swapSort();
 //quickSort();
 //swapSortLong();
 compareSort();
  //compareSortChunk();
  //insertSort();
+}
 }
