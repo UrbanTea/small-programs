@@ -3,7 +3,7 @@ void compareSortChunk(){
  
 if(index1<index){
   index++;
-  index1=index+int(d2/5);
+  index1=index+int(d2/10);
  
  
   totalCorrect=0;
@@ -48,7 +48,7 @@ temp[6]++;
  }
  if(index1<index){
   index++;
-  index1=index+int(d2/5);
+  index1=index+int(d2/10);
  
  
   totalCorrect=0;
@@ -122,6 +122,7 @@ index3--;
   index3=index2;
 
  }
+ if(index3<lineH.length-1){
   if(lineH[index3+1]<lineH[index3]){
    totalCorrect++;
    totalswaps++;
@@ -133,6 +134,7 @@ index3--;
  //index2--;
   
 
+ }
  }
   if(index3>0){
     if(index3<lineH.length-1){

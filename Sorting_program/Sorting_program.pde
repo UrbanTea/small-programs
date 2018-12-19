@@ -1,5 +1,5 @@
-int sizeW=1900;
-int dataPointWidth=1;
+int sizeW=1500;
+int dataPointWidth=5;
 void settings(){
     //fullScreen();
 size(sizeW,800);
@@ -63,7 +63,7 @@ if(compleat==false){
 //quickSort();
 //swapSortLong();
 //compareSort();
- //compareSortChunk();
- insertSort();
+ compareSortChunk();
+ //insertSort();
 }
 }
