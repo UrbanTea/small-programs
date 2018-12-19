@@ -55,7 +55,11 @@ void keyPressed(){
   dictnary[index]+=key; 
  }
  if(keyCode==BACKSPACE){
-   dictnary[index]="";
+   if(dictnary[index].length()>1){
+   dictnary[index]=dictnary[index].substring( 0, dictnary[index].length()-1 );
+   }else{
+    dictnary[index]=""; 
+   }
  }
  if(keyCode==LEFT){
  if(index>0){
