@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 int sizeW=1900;
 float dataPointWidth=10;
+=======
+int sizeW=1500;
+int dataPointWidth=5;
+>>>>>>> d68c630f71ed284ddc605b19f986cef056f204fd
 void settings(){
     //fullScreen();
 size(sizeW,800);
@@ -63,7 +68,12 @@ if(compleat==false){
 //quickSort();
 //swapSortLong();
 //compareSort();
+<<<<<<< HEAD
 // compareSortChunk();
  insertSort();
+=======
+ compareSortChunk();
+ //insertSort();
+>>>>>>> d68c630f71ed284ddc605b19f986cef056f204fd
 }
 }
