@@ -1,16 +1,16 @@
-<<<<<<< HEAD
+
 int sizeW=1900;
-float dataPointWidth=10;
-=======
-int sizeW=1500;
-int dataPointWidth=5;
->>>>>>> d68c630f71ed284ddc605b19f986cef056f204fd
+int boxS=5;
+
+
+
+
 void settings(){
     //fullScreen();
 size(sizeW,800);
 }
 
-float[] lineH=new float[int(sizeW/dataPointWidth)];
+float[] lineH=new float[int(sizeW/boxS)];
 float[] temp=new float[lineH.length];
 int index=0;
 int index1=1;
@@ -68,12 +68,11 @@ if(compleat==false){
 //quickSort();
 //swapSortLong();
 //compareSort();
-<<<<<<< HEAD
+
 // compareSortChunk();
  insertSort();
-=======
  compareSortChunk();
  //insertSort();
->>>>>>> d68c630f71ed284ddc605b19f986cef056f204fd
+
 }
 }
