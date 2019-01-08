@@ -1,5 +1,6 @@
 void swapSortLong(){
 if(index>lineH.length-1||index1>lineH.length-1){
+  compleatCheck();
   index=0;
   index1=distance;
  if(distance<=0){

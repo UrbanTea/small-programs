@@ -1,11 +1,11 @@
 int sizeW=1900;
-int dataPointWidth=1;
+float dataPointWidth=10;
 void settings(){
     //fullScreen();
 size(sizeW,800);
 }
 
-float[] lineH=new float[sizeW/dataPointWidth];
+float[] lineH=new float[int(sizeW/dataPointWidth)];
 float[] temp=new float[lineH.length];
 int index=0;
 int index1=1;
@@ -57,13 +57,13 @@ noStroke();
    rect(i*(width/lineH.length),height-lineH[i],(width/lineH.length),lineH[i]);
    
  }
- println(frameRate,"||"," swaps ",totalCorrect,totalswaps," || ", "comparason ",comparason,"compleat",compleat,compleatI);
+ println(frameRate,"||"," swaps ",totalCorrect,totalswaps," || ", "comparason ",comparason, " || ","compleat",compleat,compleatI);
 if(compleat==false){
 //swapSort();
 //quickSort();
 //swapSortLong();
 //compareSort();
- //compareSortChunk();
+// compareSortChunk();
  insertSort();
 }
 }

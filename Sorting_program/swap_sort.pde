@@ -1,5 +1,6 @@
 void swapSort(){
 if(index>lineH.length-1||index1>lineH.length-1){
+  compleatCheck();
   index=0;
   index1=1;
   totalCorrect=0;

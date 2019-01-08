@@ -11,9 +11,11 @@ void compleatCheck(){
    if(compleatCount==0){
     compleat=true;
     compleatCount=0;
+    compleatI=0;
    }else{
     compleat=false;
     compleatCount=0;
+    compleatI=0;
    }
    
   

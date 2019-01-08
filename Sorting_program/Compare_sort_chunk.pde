@@ -7,12 +7,14 @@ if(index1<index){
  
  
   totalCorrect=0;
+  compleatCheck();
  }  
   if(index1>lineH.length-1){
   index1=lineH.length-1;
 
  }
  if(index>lineH.length-1){
+   
   index=0;
 temp[1]++;
   index1=1;
@@ -122,6 +124,7 @@ index3--;
   index3=index2;
 
  }
+ if(index3<lineH.length-1){
   if(lineH[index3+1]<lineH[index3]){
    totalCorrect++;
    totalswaps++;
@@ -144,6 +147,7 @@ temp[4]++;
  temp[4]=1;
  }
     }
+ }
  }
  /*if(index2<0){
   index2=index;
