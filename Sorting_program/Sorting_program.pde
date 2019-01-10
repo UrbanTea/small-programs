@@ -66,12 +66,12 @@ noStroke();
 if(compleat==false){
 //swapSort();
 //quickSort();
-//swapSortLong();
+swapSortLong();
 //compareSort();
 
 // compareSortChunk();
- insertSort();
- compareSortChunk();
+ //insertSort();
+ //compareSortChunk();
  //insertSort();
 
 }
