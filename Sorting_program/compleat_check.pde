@@ -1,6 +1,6 @@
 void compleatCheck(){
   while(compleatI<lineH.length-1){
-   
+      
  if(lineH[compleatI]>lineH[compleatI+1] ){
    compleatCount++;
  }
@@ -30,6 +30,13 @@ void compleatCheck(){
  index1=1;
  index2=0;
  index3=0;
+  averageswaps=int((averageswaps+totalswaps)/2);
+  averagespeed=((averagespeed+(speed/frameRate))/2);
+  averagecomparason=int((averagecomparason+comparason)/2);
+  totalruns++;
+  speed=0;
+ totalswaps=0;
+ comparason=0;
  compleat=false;
    compleatCount=0;
     compleatI=0;

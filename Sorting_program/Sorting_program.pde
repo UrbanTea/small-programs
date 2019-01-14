@@ -1,6 +1,6 @@
 
-int sizeW=200;
-int sizeH=200;
+int sizeW=1000;
+int sizeH=100;
 int boxS=1;
 boolean loop=true;
 
@@ -26,6 +26,11 @@ int totalCorrect=0;
 int totalswaps=0;
 int comparason=0;
 int time=0;
+int speed=0;
+float averagespeed=0;
+float averageswaps=0;
+float averagecomparason=0;
+int totalruns=1;
 void setup(){
 
   frameRate(9999);
@@ -39,6 +44,7 @@ void setup(){
   
 }
 void draw(){
+  speed++;
   //randomData(1,1,1);
  background(0); 
 strokeWeight(.5);
@@ -63,17 +69,19 @@ noStroke();
    rect(i*(width/lineH.length),height-lineH[i],(width/lineH.length),lineH[i]);
    
  }
- println(frameRate,"||"," swaps ",totalCorrect,totalswaps," || ", "comparason ",comparason, " || ","compleat",compleat,compleatI);
+
+println(" ");
+println(" ");
+ println(frameRate,"||"," swaps ",totalswaps,averageswaps," || ", "comparason ",comparason,averagecomparason, " || ","compleat",compleat,compleatI);
+ println(" average swaps ",averageswaps," || ","average comparason ",averagecomparason," || ","loop:",totalruns," || ","speed:",averagespeed);
 if(compleat==false){
-swapSort();
+  //swapSort();
 //quickSort();
 //swapSortLong();
 //compareSort();
+ compareSortChunk();
+// insertSort();
 
-// compareSortChunk();
- //insertSort();
-// compareSortChunk();
- //insertSort();
 
 }
 }
