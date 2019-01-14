@@ -1,13 +1,14 @@
 
-int sizeW=1900;
-int boxS=5;
-
+int sizeW=200;
+int sizeH=200;
+int boxS=1;
+boolean loop=true;
 
 
 
 void settings(){
     //fullScreen();
-size(sizeW,800);
+size(sizeW,sizeH);
 }
 
 float[] lineH=new float[int(sizeW/boxS)];
@@ -64,14 +65,14 @@ noStroke();
  }
  println(frameRate,"||"," swaps ",totalCorrect,totalswaps," || ", "comparason ",comparason, " || ","compleat",compleat,compleatI);
 if(compleat==false){
-//swapSort();
+swapSort();
 //quickSort();
-swapSortLong();
+//swapSortLong();
 //compareSort();
 
 // compareSortChunk();
  //insertSort();
- //compareSortChunk();
+// compareSortChunk();
  //insertSort();
 
 }

@@ -38,7 +38,8 @@ index3--;
    totalCorrect++;
    totalswaps++;
    comparason++;
-    swap(lineH[index3+1],lineH[index3]);
+    //swap(lineH[index3+1],lineH[index3]);
+  
  //index2--;
   
   }
