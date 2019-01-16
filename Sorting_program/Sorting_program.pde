@@ -1,14 +1,15 @@
 
-int sizeW=1000;
+int sizeW=100;
 int sizeH=100;
 int boxS=1;
 boolean loop=true;
-
+int sortinfo=0;
 
 
 void settings(){
     //fullScreen();
 size(sizeW,sizeH);
+
 }
 
 float[] lineH=new float[int(sizeW/boxS)];
@@ -39,11 +40,13 @@ void setup(){
   //lineH[i]=height-i;
    temp[i]=0;
    print(lineH[i]+"||");
+   frame.setResizable(true);
   }
   
   
 }
 void draw(){
+  randomSeed(millis());
   speed++;
   //randomData(1,1,1);
  background(0); 
@@ -70,18 +73,51 @@ noStroke();
    
  }
 
-println(" ");
-println(" ");
+
  println(frameRate,"||"," swaps ",totalswaps,averageswaps," || ", "comparason ",comparason,averagecomparason, " || ","compleat",compleat,compleatI);
  println(" average swaps ",averageswaps," || ","average comparason ",averagecomparason," || ","loop:",totalruns," || ","speed:",averagespeed);
 if(compleat==false){
-  //swapSort();
-//quickSort();
-//swapSortLong();
-//compareSort();
- compareSortChunk();
-// insertSort();
+ sort(sortinfo);
 
 
 }
+}
+void keyPressed(){
+ if(keyCode==UP&&sortinfo<4){
+  sortinfo++; 
+  index=0;
+ index1=1;
+ index2=0;
+index3=0;
+totalCorrect=0;
+ totalswaps=0;
+ totalruns=1;
+ speed=0;
+  averagespeed=0;
+ averageswaps=0;
+ averagecomparason=0;
+ }
+ if(keyCode==DOWN&&sortinfo>0){
+  sortinfo--; 
+  index=0;
+ index1=1;
+ index2=0;
+index3=0;
+totalCorrect=0;
+ totalswaps=0;
+ totalruns=1;
+ speed=0;
+ averagespeed=0;
+ averageswaps=0;
+ averagecomparason=0;
+ }
+  if(keyCode==LEFT&&sizeW>10){
+   sizeW--; 
+     frame.setSize(sizeW, sizeH);
+  }
+  if(keyCode==RIGHT&&sizeW<2000){
+   sizeW++; 
+   frame.setSize(sizeW, sizeH);
+  }
+  
 }

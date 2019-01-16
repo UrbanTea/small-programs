@@ -1,0 +1,22 @@
+void sort(int sortnum){
+  if(sortnum==0){
+    swapSort();
+    println("swapSort");
+  }
+  if(sortnum==1){
+    swapSortLong();
+    println("swapSortLong");
+  }
+  if(sortnum==2){
+    compareSort();
+    println("compareSort");
+  }
+  if(sortnum==3){
+   compareSortChunk(); 
+   println("CompareSortchunk");
+  }
+  if(sortnum==4){
+   insertSort(); 
+   println("insertSort");
+  }
+}
