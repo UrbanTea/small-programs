@@ -1,9 +1,9 @@
 
-int sizeW=100;
+int sizeW=10;
 int sizeH=100;
 int boxS=1;
 boolean loop=true;
-int sortinfo=0;
+int sortinfo=3;
 
 
 void settings(){
@@ -33,7 +33,7 @@ float averageswaps=0;
 float averagecomparason=0;
 int totalruns=1;
 void setup(){
-
+ 
   frameRate(9999);
   for(int i=0;i<lineH.length;i++){
    lineH[i]=random(1,height); 
@@ -46,6 +46,7 @@ void setup(){
   
 }
 void draw(){
+  
   randomSeed(millis());
   speed++;
   //randomData(1,1,1);
@@ -75,7 +76,8 @@ noStroke();
 
 
  println(frameRate,"||"," swaps ",totalswaps,averageswaps," || ", "comparason ",comparason,averagecomparason, " || ","compleat",compleat,compleatI);
- println(" average swaps ",averageswaps," || ","average comparason ",averagecomparason," || ","loop:",totalruns," || ","speed:",averagespeed);
+ println(" average swaps ",averageswaps," || ","average comparason ",averagecomparason," || ","loop:",totalruns," || ","speed:",int(averagespeed));
+ println("number of things "+lineH.length);
 if(compleat==false){
  sort(sortinfo);
 
@@ -96,6 +98,17 @@ totalCorrect=0;
   averagespeed=0;
  averageswaps=0;
  averagecomparason=0;
+ for(int i=0;i<lineH.length;i++){
+   lineH[i]=random(0,height); 
+   for(int t=0;t<lineH.length;t++){
+     if(lineH[t]<0){
+      lineH[t]=0; 
+     }
+     if(lineH[t]>height){
+      lineH[t]=height; 
+     }
+   }
+ }
  }
  if(keyCode==DOWN&&sortinfo>0){
   sortinfo--; 
@@ -110,14 +123,18 @@ totalCorrect=0;
  averagespeed=0;
  averageswaps=0;
  averagecomparason=0;
+ for(int i=0;i<lineH.length;i++){
+   lineH[i]=random(0,height); 
+   for(int t=0;t<lineH.length;t++){
+     if(lineH[t]<0){
+      lineH[t]=0; 
+     }
+     if(lineH[t]>height){
+      lineH[t]=height; 
+     }
+   }
  }
-  if(keyCode==LEFT&&sizeW>10){
-   sizeW--; 
-     frame.setSize(sizeW, sizeH);
-  }
-  if(keyCode==RIGHT&&sizeW<2000){
-   sizeW++; 
-   frame.setSize(sizeW, sizeH);
-  }
+ }
+  
   
 }

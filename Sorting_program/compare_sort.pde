@@ -63,7 +63,7 @@ index1--;
   index2=index;
  } 
  
-
+if(index2+1<lineH.length){
   if(lineH[index2+1]<lineH[index2]){
    totalCorrect++;
    totalswaps++;
@@ -82,6 +82,7 @@ index1--;
 index2--;
 
  }
+}
   if(index2>0){
     if(index2<lineH.length-1){
  if(lineH[index2]>lineH[index2-1]&&lineH[index2+1]>lineH[index2]){

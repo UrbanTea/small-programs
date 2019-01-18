@@ -14,6 +14,7 @@ void compleatCheck(){
     compleatCount=0;
     compleatI=0;
      }else{
+       lineH=new float[int(sizeW/boxS)];
        for(int i=0;i<lineH.length;i++){
    lineH[i]=random(0,height); 
    for(int t=0;t<lineH.length;t++){
@@ -40,6 +41,9 @@ void compleatCheck(){
  compleat=false;
    compleatCount=0;
     compleatI=0;
+    sizeW++;
+     frame.setSize(sizeW,sizeH);
+
      }
    }else{
     compleat=false;
