@@ -18,6 +18,7 @@ void draw(){
   if(y>=height){
    y=0;
    x=0;
+   background(0);
   }
   if(a==b){
    c++;
@@ -26,5 +27,5 @@ void draw(){
   }
   total++;
   x++;
-  println(c,"/",total," || ",x,"||",y);
+  println(c,"/",total," || ",((float(c)/float(total))*100),"||",x,"||",y);
 }
