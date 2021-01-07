@@ -32,7 +32,11 @@ void compleatCheck(){
  index2=0;
  index3=0;
   averageswaps=int((averageswaps+totalswaps)/2);
-  averagespeed=((averagespeed+(speed/frameRate))/2);
+  if(totalruns==1){
+    averagespeed=speed;
+  }else{
+  averagespeed=((averagespeed+speed)/2);
+  }
   averagecomparason=int((averagecomparason+comparason)/2);
   totalruns++;
   speed=0;

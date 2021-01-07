@@ -19,5 +19,8 @@ void sort(int sortnum){
    insertSort(); 
    println("insertSort"+sortnum);
   }
-  
+  if(sortnum==5){
+   quickSort(); 
+   println("quickSort"+sortnum);
+  }
 }

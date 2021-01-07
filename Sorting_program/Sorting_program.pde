@@ -1,9 +1,9 @@
 
-int sizeW=10;
-int sizeH=100;
+int sizeW=1900;
+int sizeH=1000;
 int boxS=1;
 boolean loop=true;
-int sortinfo=3;
+int sortinfo=5;
 
 
 void settings(){
@@ -27,7 +27,7 @@ int totalCorrect=0;
 int totalswaps=0;
 int comparason=0;
 int time=0;
-int speed=0;
+float speed=0;
 float averagespeed=0;
 float averageswaps=0;
 float averagecomparason=0;
@@ -40,7 +40,7 @@ void setup(){
   //lineH[i]=height-i;
    temp[i]=0;
    print(lineH[i]+"||");
-   frame.setResizable(true);
+   //frame.setResizable(true);
   }
   
   
@@ -48,7 +48,8 @@ void setup(){
 void draw(){
   
   randomSeed(millis());
-  speed++;
+  speed+=(1/frameRate);
+ 
   //randomData(1,1,1);
  background(0); 
 strokeWeight(.5);
@@ -69,14 +70,17 @@ noStroke();
    if(i==index||i==index1||i==index2||i==index3){
      fill(255,0,0);
    } 
+   
  
    rect(i*(width/lineH.length),height-lineH[i],(width/lineH.length),lineH[i]);
    
  }
-
+if(totalruns==1){
+ averagespeed=speed; 
+}
 
  println(frameRate,"||"," swaps ",totalswaps,averageswaps," || ", "comparason ",comparason,averagecomparason, " || ","compleat",compleat,compleatI);
- println(" average swaps ",averageswaps," || ","average comparason ",averagecomparason," || ","loop:",totalruns," || ","speed:",int(averagespeed));
+ println(" average swaps ",averageswaps," || ","average comparason ",averagecomparason," || ","loop:",totalruns," || ","average speed:",averagespeed," || ","speed: ",speed);
  println("number of things "+lineH.length);
 if(compleat==false){
  sort(sortinfo);
@@ -85,7 +89,7 @@ if(compleat==false){
 }
 }
 void keyPressed(){
- if(keyCode==UP&&sortinfo<4){
+ if(keyCode==UP&&sortinfo<5){
   sortinfo++; 
   index=0;
  index1=1;
