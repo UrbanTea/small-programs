@@ -1,6 +1,6 @@
 
 int sizeW=1900;
-int sizeH=1000;
+int sizeH=200;
 int boxS=1;
 boolean loop=true;
 int sortinfo=5;
