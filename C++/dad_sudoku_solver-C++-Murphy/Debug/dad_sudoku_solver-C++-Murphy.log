@@ -1,0 +1,3 @@
+﻿  CSC-160-projectName-C++-Murphy.cpp
+C:\Users\jacob\OneDrive\Documents\GitHub\small-programs\C++\dad_sudoku_solver-C++-Murphy\CSC-160-projectName-C++-Murphy.cpp(84,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  dad_sudoku_solver-C++-Murphy.vcxproj -> C:\Users\jacob\OneDrive\Documents\GitHub\small-programs\C++\dad_sudoku_solver-C++-Murphy\Debug\dad_sudoku_solver-C++-Murphy.exe

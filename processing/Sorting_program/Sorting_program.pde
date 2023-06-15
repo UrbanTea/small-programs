@@ -1,7 +1,7 @@
 
 int sizeW=1900;
 int sizeH=200;
-int boxS=1;
+int boxS=5;
 boolean loop=true;
 int sortinfo=5;
 
